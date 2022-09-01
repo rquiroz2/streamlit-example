@@ -37,10 +37,9 @@ with st.echo(code_location='below'):
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
 
-sample = st.text("Hello")
+sample = st.text_input("Hello", key="button12")
 
 button1 = st.button("hi")
 
 if button1:
-    sample("nevermind")
-    
+    st.session_state.button12 = 7
