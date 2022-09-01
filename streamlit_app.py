@@ -37,9 +37,11 @@ with st.echo(code_location='below'):
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
 
-sample = st.text_input("Hello", key="button12")
+slider = st.slider(
+    label='My Slider', min_value=1,
+    max_value=10, value=5, key='my_slider')
 
 button1 = st.button("hi")
 
 if button1:
-    st.session_state.button12 = 7
+    st.session_state.my_slider = 7
